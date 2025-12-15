@@ -25,11 +25,19 @@ typedef struct s_world {
 } world_t;
 
 //BUCKET_INIT =========================
+
 int		bucket_init(bucket_t *b);
 
 //BUCKET_OPS =========================
+
 void	bucket_push(bucket_t *b, int val);
 
+//BUCKET_UTILS =========================
+
+void	bucket_destroy(bucket_t *b);
+void	bucket_compact(bucket_t *b);
+int	 	cmp_int_asc(const void *a, const void *b);
+void	world_sort_buckets(world_t *w);
 
 
 #endif
