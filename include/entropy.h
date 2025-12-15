@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <limits.h>
+
 #define START_CAP 8
 #define CLR_END  "\033[0m"
 #define CLR_RED  "\033[31m"
@@ -39,9 +40,14 @@ void	bucket_compact(bucket_t *b);
 int	 	cmp_int_asc(const void *a, const void *b);
 void	world_sort_buckets(world_t *w);
 
-//WOLRD_INIT =========================
+//WORLD_INIT =========================
 
 int world_init(world_t *w, int nthreads, int per_thread);
+
+//WORLD_OPS =========================
+
+void	world_finish_buckets(world_t *w);
+void	world_print_and_cleanup(world_t *w);
 
 
 #endif
