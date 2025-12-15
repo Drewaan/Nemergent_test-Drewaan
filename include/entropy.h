@@ -7,6 +7,7 @@
 #include <pthread.h>
 #include <limits.h>
 #include <time.h>
+#include <ctype.h>
 
 #define _GNU_SOURCE
 #define START_CAP 8
@@ -44,6 +45,10 @@ void	bucket_destroy(bucket_t *b);
 void	bucket_compact(bucket_t *b);
 int	 	cmp_int_asc(const void *a, const void *b);
 void	world_sort_buckets(world_t *w);
+
+//RESULTS_DISPLAY =========================
+
+void world_show_results(const world_t *w);
 
 //RANDOM_GEN =========================
 
