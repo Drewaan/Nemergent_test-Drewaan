@@ -3,9 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <pthread.h>
 #include <limits.h>
-#include <stdint.h>
+#include <time.h>
 
 #define _GNU_SOURCE
 #define START_CAP 8
@@ -47,6 +48,10 @@ void	world_sort_buckets(world_t *w);
 //RANDOM_GEN =========================
 
 int	generate_full_int(unsigned int *seedp);
+
+//THREAD_WORKER =========================
+
+void	world_launch(world_t *w);
 
 //WORLD_INIT =========================
 
