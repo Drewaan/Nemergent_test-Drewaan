@@ -5,25 +5,29 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <limits.h>
+#include <stdint.h>
 
+#define _GNU_SOURCE
 #define START_CAP 8
 #define CLR_END  "\033[0m"
 #define CLR_RED  "\033[31m"
 #define CLR_GREEN "\033[32m"
 
-typedef struct s_bucket {
+typedef struct s_bucket
+{
 	int *values;
 	int capacity;
 	int length;
 	pthread_mutex_t mtx;
-} bucket_t;
+}	bucket_t;
 
-typedef struct s_world {
+typedef struct s_world
+{
 	int nthreads;
 	int per_thread;
 	bucket_t positives;
 	bucket_t negatives;
-} world_t;
+}	world_t;
 
 //BUCKET_INIT =========================
 
@@ -39,6 +43,10 @@ void	bucket_destroy(bucket_t *b);
 void	bucket_compact(bucket_t *b);
 int	 	cmp_int_asc(const void *a, const void *b);
 void	world_sort_buckets(world_t *w);
+
+//RANDOM_GEN =========================
+
+int	generate_full_int(unsigned int *seedp);
 
 //WORLD_INIT =========================
 
