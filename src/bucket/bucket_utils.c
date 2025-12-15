@@ -41,6 +41,7 @@ int cmp_int_asc(const void *a, const void *b)
 	return 0;
 }
 
+
 void world_sort_buckets(world_t *w)
 {
 	if (w->positives.values && w->positives.length > 0)
