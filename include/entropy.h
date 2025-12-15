@@ -39,5 +39,9 @@ void	bucket_compact(bucket_t *b);
 int	 	cmp_int_asc(const void *a, const void *b);
 void	world_sort_buckets(world_t *w);
 
+//WOLRD_INIT =========================
+
+int world_init(world_t *w, int nthreads, int per_thread);
+
 
 #endif
