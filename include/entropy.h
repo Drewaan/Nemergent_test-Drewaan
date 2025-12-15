@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <limits.h>
+#define START_CAP 8
+#define CLR_END  "\033[0m"
+#define CLR_RED  "\033[31m"
+#define CLR_GREEN "\033[32m"
 
 typedef struct s_bucket {
 	int *values;
