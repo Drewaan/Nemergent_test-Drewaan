@@ -24,5 +24,12 @@ typedef struct s_world {
 	bucket_t negatives;
 } world_t;
 
+//BUCKET_INIT =========================
+int		bucket_init(bucket_t *b);
+
+//BUCKET_OPS =========================
+void	bucket_push(bucket_t *b, int val);
+
+
 
 #endif
